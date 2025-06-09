@@ -23,12 +23,12 @@ This project includes a mechanism to install/update both public and private anal
 ✅ Public Modules (from TheHive-Project)
 These are standard modules maintained by TheHive Project:
 
-VirusTotal
-Hybrid-Analysis
-Shodan
-IBM X-Force
-URLScan
-PassiveTotal
+- VirusTotal
+- Hybrid-Analysis
+- Shodan
+- IBM X-Force
+- URLScan
+- PassiveTotal
 And many more...
 ```
 They can be found in the official repo:
@@ -53,14 +53,16 @@ This Docker image is based on the official thehiveproject/cortex:3.1.8-withdeps 
 The image comes with a wide set of tools and libraries required by most analyzers:
 
 ```
-Python 3 + pip
-Libraries: ssdeep, libfuzzy-dev, libimage-exiftool-perl, libmagic1
-Build tools: build-essential, python3-dev, git, libssl-dev
-Utilities: curl, wget, unzip, iputils-ping, gnupg, tshark (Wireshark CLI)
-Locale support: locales
+- Python 3 + pip
+- Libraries: ssdeep, libfuzzy-dev, libimage-exiftool-perl, libmagic1
+- Build tools: build-essential, python3-dev, git, libssl-dev
+- Utilities: curl, wget, unzip, iputils-ping, gnupg, tshark (Wireshark CLI)
+- Locale support: locales
+```
 🌐 Google Chrome + Chromedriver (Selenium)
+```
 To support analyzers that require browser automation or JavaScript execution, the following are installed:
 
-Google Chrome Stable
-Chromedriver matching the Chrome version
+- Google Chrome Stable
+- Chromedriver matching the Chrome version
 ```
