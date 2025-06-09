@@ -23,7 +23,7 @@ This project includes a mechanism to install/update both public and private anal
 ✅ Public Modules (from TheHive-Project)
 These are standard modules maintained by TheHive Project:
 
-- VirusTotal
+__ VirusTotal
 - Hybrid-Analysis
 - Shodan
 - IBM X-Force
