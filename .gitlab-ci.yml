@@ -11,7 +11,7 @@ Deploy:
     - mkdir -p /opt/cortex/vol/elasticsearch/conf
     - mkdir -p /opt/cortex/vol/elasticsearch/data
     - mkdir -p /opt/cortex/vol/elasticsearch/logs
-    - cp -r ./vol/cortex/conf/ /opt/cortex/vol/cortex/
+    - cp -r ./application.conf /opt/cortex/vol/cortex/
     - chown -R user:user /opt/cortex
     - find /opt/cortex/ -name .gitkeep -exec rm {}  \;
     - chmod +r /opt/cortex/vol/cortex
