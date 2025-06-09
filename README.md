@@ -1,8 +1,10 @@
-# Cortex
-gitlab-ci проект для удаленной автоматизации установки и обновления Cortex
+# 🧠 Cortex — Dockerized Automation Platform for Threat Intelligence
 
-Проект позволяет автоматически развернуть в docker Cortex + локальные анализаторы/респондеры с обновлением дефолтных
+> **Cortex** is a Docker-ready automation platform for running analyzers and responders used in threat intelligence, incident response, and digital forensics workflows. This project provides an automated deployment setup using GitLab CI/CD with support for custom/private modules.
 
-Заточен под Gitlab: 
-1. gitlab-ci.yml - содержит набор команд для хоста, создает необходимые директории, удаляет лишнее перезапускает docker-compose
-2. Dockerfile - содержит инструкции по подготовке docker-образа, обновление analyzers/responders, выгрузку и установкку приватных
+[![pipeline status](https://gitlab.com/kiz1/Cortex/badges/main/pipeline.svg)](https://gitlab.com/kiz1/Cortex/-/commits/main) 
+[![license](https://img.shields.io/github/license/kiz1/Cortex)](https://github.com/kiz1/Cortex/blob/main/LICENSE) 
+
+---
+
+## 📁 Project Structure
