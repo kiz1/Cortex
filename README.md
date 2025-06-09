@@ -44,3 +44,23 @@ RUN git clone https://your-private-repo.com/analyzers  /opt/cortex/analyzer && \
 ```
 
 Just make sure you have access configured properly (SSH keys, tokens, etc.).
+
+
+🐳 Docker Image Features
+This Docker image is based on the official thehiveproject/cortex:3.1.8-withdeps and includes several enhancements to make Cortex more usable in production environments.
+
+🔧 Installed Dependencies
+The image comes with a wide set of tools and libraries required by most analyzers:
+
+```
+Python 3 + pip
+Libraries: ssdeep, libfuzzy-dev, libimage-exiftool-perl, libmagic1
+Build tools: build-essential, python3-dev, git, libssl-dev
+Utilities: curl, wget, unzip, iputils-ping, gnupg, tshark (Wireshark CLI)
+Locale support: locales
+🌐 Google Chrome + Chromedriver (Selenium)
+To support analyzers that require browser automation or JavaScript execution, the following are installed:
+
+Google Chrome Stable
+Chromedriver matching the Chrome version
+```
