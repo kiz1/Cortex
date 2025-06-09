@@ -1,0 +1,28 @@
+stages:
+  - deploy
+
+Deploy:
+  stage: deploy
+  script:
+    - mkdir -p /opt/cortex/vol/cortex/conf
+    - rm -rf /opt/cortex/vol/cortex/cortex-analyzers/
+    - mkdir -p /opt/cortex/vol/cortex/cortex-analyzers
+    - mkdir -p /opt/cortex/vol/cortex/jobs
+    - mkdir -p /opt/cortex/vol/elasticsearch/conf
+    - mkdir -p /opt/cortex/vol/elasticsearch/data
+    - mkdir -p /opt/cortex/vol/elasticsearch/logs
+    - cp -r ./vol/cortex/conf/ /opt/cortex/vol/cortex/
+    - chown -R user:user /opt/cortex
+    - find /opt/cortex/ -name .gitkeep -exec rm {}  \;
+    - chmod +r /opt/cortex/vol/cortex
+    - docker-compose down
+    - docker-compose pull
+    - docker-compose up -d --build
+    - docker image prune -a -f
+  only:
+    refs:
+      - main
+    changes:
+      - vol/cortex/conf/*
+      - docker-compose.yml
+      - .gitlab-ci.yml
