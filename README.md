@@ -7,16 +7,19 @@
 
 ## 📁 Project Structure
 
+```
 Cortex/
 ├── gitlab-ci.yml # CI/CD pipeline definition
 ├── Dockerfile # Custom Docker image build instructions
 ├── docker-compose.yml # Service orchestration (Cortex + ES)
 ├── application.conf # File configuration
 └── README.md # This documentation file
+```
 
 ⚙️ Analyzers & Responders
 This project includes a mechanism to install/update both public and private analyzers/responders automatically during Docker image build.
 
+```
 ✅ Public Modules (from TheHive-Project)
 These are standard modules maintained by TheHive Project:
 
@@ -27,5 +30,6 @@ IBM X-Force
 URLScan
 PassiveTotal
 And many more...
+```
 They can be found in the official repo:
 https://github.com/TheHive-Project/Cortex-Analyzers
