@@ -33,3 +33,14 @@ And many more...
 ```
 They can be found in the official repo:
 https://github.com/TheHive-Project/Cortex-Analyzers
+
+🔒 Private Modules
+You can add your own private/internal analyzers/responders into the image by modifying the Dockerfile, e.g.:
+
+```
+RUN git clone https://your-private-repo.com/analyzers  /opt/cortex/analyzer && \
+    cd /opt/cortex/analyzer && \
+    pip install -r requirements.txt
+```
+
+Just make sure you have access configured properly (SSH keys, tokens, etc.).
